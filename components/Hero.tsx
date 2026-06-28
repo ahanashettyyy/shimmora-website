@@ -1,108 +1,331 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 import Glitter from "@/components/Glitter";
 
 export default function Hero() {
   return (
     <section
-      className="relative min-h-screen text-white overflow-hidden"
+      className="relative overflow-hidden min-h-screen text-white"
       style={{
         background:
-          "linear-gradient(135deg, #700342 0%, #A1146E 45%, #C13494 100%)",
+          "linear-gradient(135deg,#700342 0%,#A1146E 45%,#C13494 100%)",
       }}
     >
       <Glitter />
 
-      <div className="max-w-7xl mx-auto min-h-screen flex flex-col-reverse lg:flex-row items-center justify-center gap-14 px-6 sm:px-8 lg:px-16 pt-28 pb-16">
+      {/* Floating Images */}
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.2 }}
+        className="absolute inset-0 pointer-events-none"
+      >
+
+        {/* BIG CENTER IMAGE */}
+
+        <div
+          className="
+          absolute
+          left-1/2
+          top-[52%]
+          -translate-x-1/2
+          -translate-y-1/2
+          w-[260px]
+          h-[260px]
+          md:w-[420px]
+          md:h-[420px]
+          rounded-full
+          bg-white/10
+          border
+          border-white/30
+          backdrop-blur-md
+          overflow-hidden
+          "
+        >
+          {/* Replace later */}
+
+          <div className="w-full h-full flex items-center justify-center text-white/60">
+            MAIN PHOTO
+          </div>
+
+          {/*
+          Later:
+
+          <Image
+          src="/images/banner-main.jpg"
+          fill
+          className="object-cover"
+          />
+          */}
+        </div>
+
+        {/* TOP LEFT */}
+
+        <div
+          className="
+          absolute
+          left-[8%]
+          top-[18%]
+          w-24
+          h-24
+          md:w-40
+          md:h-40
+          rounded-full
+          bg-white/10
+          border
+          border-white/30
+          backdrop-blur-md
+          overflow-hidden
+          "
+        >
+          <div className="w-full h-full flex items-center justify-center text-white/50 text-sm">
+            Photo
+          </div>
+        </div>
+
+        {/* TOP RIGHT */}
+
+        <div
+          className="
+          absolute
+          right-[8%]
+          top-[12%]
+          w-20
+          h-20
+          md:w-32
+          md:h-32
+          rounded-full
+          bg-white/10
+          border
+          border-white/30
+          backdrop-blur-md
+          overflow-hidden
+          "
+        >
+          <div className="w-full h-full flex items-center justify-center text-white/50 text-sm">
+            Photo
+          </div>
+        </div>
 
         {/* LEFT */}
-        <motion.div
-          className="w-full lg:w-1/2 text-center lg:text-left flex flex-col items-center lg:items-start"
-          initial={{ opacity: 0, x: -60 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{
-            duration: 0.8,
-            ease: "easeOut",
-          }}
-        >
-          <p className="uppercase tracking-[4px] sm:tracking-[6px] text-sm mb-5 opacity-90">
-            Bangalore Based
-          </p>
 
-          <h1 className="font-light leading-none tracking-tight text-5xl sm:text-6xl md:text-7xl lg:text-[92px]">
-            The
-            <br />
-            Shimmora Bar
-          </h1>
-
-          <p className="mt-8 text-base sm:text-lg lg:text-xl leading-8 max-w-xl mx-auto lg:mx-0 opacity-90">
-            Face glitter, body glitter art and magical event experiences for
-            weddings, concerts and unforgettable celebrations.
-          </p>
-
-          <div className="mt-10 flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-
-            <a
-              href="https://wa.me/919110832295?text=Hi! I'd like to book The Shimmora Bar for my event."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group w-full sm:w-auto"
-            >
-              <div className="bg-[#F9EDF0] text-[#700342] px-8 py-4 rounded-full flex justify-center items-center gap-3 hover:bg-white transition-all duration-300">
-
-                BOOK NOW
-
-                <ArrowRight
-                  size={18}
-                  className="transition-transform duration-300 group-hover:translate-x-1"
-                />
-
-              </div>
-            </a>
-
-            <a
-              href="#gallery"
-              className="group w-full sm:w-auto border border-[#F9EDF0] px-8 py-4 rounded-full flex justify-center items-center gap-3 hover:bg-[#F9EDF0] hover:text-[#700342] transition-all duration-300"
-            >
-              VIEW GALLERY
-
-              <ArrowRight
-                size={18}
-                className="transition-transform duration-300 group-hover:translate-x-1"
-              />
-            </a>
-
-          </div>
-        </motion.div>
+        <div
+          className="
+          absolute
+          left-[12%]
+          bottom-[20%]
+          w-20
+          h-20
+          md:w-28
+          md:h-28
+          rounded-full
+          bg-white/10
+          border
+          border-white/30
+          backdrop-blur-md
+          "
+        />
 
         {/* RIGHT */}
-        <motion.div
-          className="w-full lg:w-1/2 flex justify-center"
-          initial={{ opacity: 0, x: 60, scale: 0.9 }}
-          animate={{ opacity: 1, x: 0, scale: 1 }}
-          transition={{
-            duration: 1,
-            delay: 0.2,
-            ease: "easeOut",
-          }}
+
+        <div
+          className="
+          absolute
+          right-[10%]
+          bottom-[18%]
+          w-24
+          h-24
+          md:w-36
+          md:h-36
+          rounded-full
+          bg-white/10
+          border
+          border-white/30
+          backdrop-blur-md
+          "
+        />
+
+      </motion.div>
+
+      {/* Hero Content */}
+
+      <div
+        className="
+        relative
+        z-20
+        max-w-6xl
+        mx-auto
+        min-h-screen
+        flex
+        flex-col
+        justify-center
+        items-center
+        text-center
+        px-6
+        "
+      >
+
+        <motion.p
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: .2 }}
+          className="
+          uppercase
+          tracking-[5px]
+          text-sm
+          mb-6
+          "
         >
-          <div className="relative w-full max-w-[340px] sm:max-w-[420px] lg:max-w-[500px] aspect-square lg:aspect-[4/5] rounded-[40px] overflow-hidden shadow-[0_40px_100px_rgba(112,3,66,0.35)]">
+          Bangalore Based
+        </motion.p>
 
-            <Image
-              src="/images/hero.jpeg"
-              alt="The Shimmora Bar"
-              fill
-              priority
-              className="object-cover"
+        <motion.h1
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: .3 }}
+          className="
+          font-light
+          leading-none
+          tracking-tight
+          text-6xl
+          sm:text-7xl
+          lg:text-[110px]
+          "
+        >
+          The
+          <br />
+          Shimmora Bar
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: .5 }}
+          className="
+          mt-8
+          max-w-2xl
+          text-base
+          sm:text-lg
+          lg:text-xl
+          leading-8
+          text-white/90
+          "
+        >
+          Luxury glitter experiences,
+          premium face art,
+          body glitter and magical moments
+          for weddings, concerts,
+          birthdays and unforgettable celebrations.
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0,y:30 }}
+          animate={{ opacity: 1,y:0 }}
+          transition={{ delay:.7 }}
+          className="
+          mt-12
+          flex
+          flex-col
+          sm:flex-row
+          gap-5
+          w-full
+          sm:w-auto
+          "
+        >
+
+          <a
+            href="https://wa.me/919110832295?text=Hi! I'd like to book The Shimmora Bar for my event."
+            target="_blank"
+            className="
+            group
+            bg-white
+            text-[#700342]
+            rounded-full
+            px-8
+            py-4
+            flex
+            justify-center
+            items-center
+            gap-3
+            font-medium
+            hover:scale-105
+            transition
+            "
+          >
+            BOOK NOW
+
+            <ArrowRight
+              size={18}
+              className="group-hover:translate-x-1 transition"
             />
+          </a>
 
-          </div>
-        </motion.div>
+          <a
+            href="#gallery"
+            className="
+            group
+            border
+            border-white
+            rounded-full
+            px-8
+            py-4
+            flex
+            justify-center
+            items-center
+            gap-3
+            hover:bg-white
+            hover:text-[#700342]
+            transition
+            "
+          >
+            VIEW GALLERY
+
+            <ArrowRight
+              size={18}
+              className="group-hover:translate-x-1 transition"
+            />
+          </a>
+                  </motion.div>
+
+        {/* Decorative glow behind heading */}
+        <div
+          className="
+            absolute
+            top-1/2
+            left-1/2
+            -translate-x-1/2
+            -translate-y-1/2
+            w-[500px]
+            h-[500px]
+            md:w-[700px]
+            md:h-[700px]
+            rounded-full
+            bg-white/5
+            blur-3xl
+            -z-10
+          "
+        />
 
       </div>
+
+      {/* Bottom Gradient Fade */}
+      <div
+        className="
+          absolute
+          bottom-0
+          left-0
+          w-full
+          h-32
+          bg-gradient-to-b
+          from-transparent
+          to-[#F9EDF0]
+        "
+      />
+
     </section>
   );
 }
