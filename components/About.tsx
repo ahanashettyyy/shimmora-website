@@ -13,7 +13,7 @@ export default function About() {
           WHO WE ARE
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2  md:gap-24 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
 
           {/* Left */}
 
