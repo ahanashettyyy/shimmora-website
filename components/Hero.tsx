@@ -16,17 +16,46 @@ export default function Hero() {
     >
       <Glitter />
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-36 pb-20 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-24 md:pt-32 pb-24 relative z-10">
 
+        {/* ========================= */}
+        {/* PHOTO BANNER */}
+        {/* ========================= */}
+
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: .8 }}
+          className="flex justify-center mb-12"
+        >
+
+          <div
+            className="
+            relative
+
+            w-[300px]
+            h-[140px]
+
+            sm:w-[380px]
+            sm:h-[170px]
+
+            md:w-[720px]
+            md:h-[220px]
+            "
+          >
+                      </div>
+        </motion.div>
+
+        {/* ========================= */}
         {/* TEXT */}
+        {/* ========================= */}
 
         <motion.div
           initial={{ opacity: 0, y: 35 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: .8 }}
-          className="text-center max-w-4xl mx-auto"
+          transition={{ delay: 0.25, duration: 0.8 }}
+          className="max-w-4xl mx-auto text-center mt-10 md:mt-14"
         >
-
           <p className="uppercase tracking-[6px] text-sm text-[#F9EDF0]/80 mb-5">
             Bangalore Based
           </p>
@@ -35,7 +64,7 @@ export default function Hero() {
             className="
             text-5xl
             sm:text-6xl
-            lg:text-[95px]
+            lg:text-[90px]
             font-light
             leading-none
             tracking-tight
@@ -46,36 +75,26 @@ export default function Hero() {
 
           <p
             className="
-            mt-8
+            mt-7
             max-w-2xl
             mx-auto
-            text-lg
-            md:text-xl
-            leading-9
+            text-base
+            sm:text-lg
+            lg:text-xl
+            leading-8
             text-[#F9EDF0]/90
             "
           >
-            Luxury face glitter,
-            body glitter and magical event experiences
-            for weddings,
-            concerts,
-            birthdays and unforgettable celebrations.
+            Luxury face glitter, body glitter and magical event experiences
+            for weddings, concerts, birthdays and unforgettable celebrations.
           </p>
 
-          <div
-            className="
-            mt-12
-            flex
-            flex-col
-            sm:flex-row
-            justify-center
-            gap-5
-            "
-          >
+          <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
 
             <a
               href="https://wa.me/919110832295?text=Hi! I'd like to book The Shimmora Bar for my event."
               target="_blank"
+              rel="noopener noreferrer"
               className="
               group
               rounded-full
@@ -88,7 +107,8 @@ export default function Hero() {
               items-center
               gap-3
               hover:scale-105
-              transition
+              transition-all
+              duration-300
               "
             >
               BOOK NOW
@@ -97,6 +117,7 @@ export default function Hero() {
                 size={18}
                 className="group-hover:translate-x-1 transition"
               />
+
             </a>
 
             <a
@@ -112,9 +133,10 @@ export default function Hero() {
               justify-center
               items-center
               gap-3
-              hover:bg-white
+              hover:bg-[#F9EDF0]
               hover:text-[#700342]
-              transition
+              transition-all
+              duration-300
               "
             >
               VIEW GALLERY
@@ -123,321 +145,11 @@ export default function Hero() {
                 size={18}
                 className="group-hover:translate-x-1 transition"
               />
+
             </a>
 
           </div>
-
         </motion.div>
-
-        {/* ========================================= */}
-        {/* DESKTOP COLLAGE */}
-        {/* ========================================= */}
-
-        <div className="hidden md:flex justify-center mt-24">
-
-          <div
-            className="
-            relative
-            w-full
-            max-w-6xl
-            h-[520px]
-            "
-          >
-                        {/* Left Large */}
-
-            <motion.div
-              initial={{ opacity: 0, x: -40 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: .3 }}
-              className="
-              absolute
-              left-0
-              top-28
-              w-72
-              h-72
-              rounded-full
-              overflow-hidden
-              border-4
-              border-white/20
-              shadow-2xl
-              "
-            >
-              <Image
-                src="/images/hero.jpeg"
-                alt=""
-                fill
-                className="object-cover scale-110"
-              />
-            </motion.div>
-
-            {/* Center */}
-
-            <motion.div
-              initial={{ opacity: 0, scale: .8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: .4 }}
-              className="
-              absolute
-              left-1/2
-              top-0
-              -translate-x-1/2
-
-              w-[360px]
-              h-[360px]
-
-              rounded-full
-              overflow-hidden
-              border-[5px]
-              border-white/30
-              shadow-[0_35px_100px_rgba(0,0,0,.35)]
-              z-20
-              "
-            >
-              <Image
-                src="/images/hero.jpeg"
-                alt=""
-                fill
-                priority
-                className="object-cover scale-110"
-              />
-            </motion.div>
-
-            {/* Right Large */}
-
-            <motion.div
-              initial={{ opacity: 0, x: 40 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: .5 }}
-              className="
-              absolute
-              right-0
-              top-28
-
-              w-72
-              h-72
-
-              rounded-full
-              overflow-hidden
-              border-4
-              border-white/20
-              shadow-2xl
-              "
-            >
-              <Image
-                src="/images/hero.jpeg"
-                alt=""
-                fill
-                className="object-cover scale-110"
-              />
-            </motion.div>
-
-            {/* Top Left */}
-
-            <div
-              className="
-              absolute
-              left-[18%]
-              top-0
-
-              w-28
-              h-28
-
-              rounded-full
-              overflow-hidden
-              border-2
-              border-white/20
-              "
-            >
-              <Image
-                src="/images/hero.jpeg"
-                alt=""
-                fill
-                className="object-cover scale-110"
-              />
-            </div>
-
-            {/* Top Right */}
-
-            <div
-              className="
-              absolute
-              right-[18%]
-              top-0
-
-              w-28
-              h-28
-
-              rounded-full
-              overflow-hidden
-              border-2
-              border-white/20
-              "
-            >
-              <Image
-                src="/images/hero.jpeg"
-                alt=""
-                fill
-                className="object-cover scale-110"
-              />
-            </div>
-
-            {/* Bottom Left */}
-
-            <div
-              className="
-              absolute
-              left-[26%]
-              bottom-0
-
-              w-32
-              h-32
-
-              rounded-full
-              overflow-hidden
-              border-2
-              border-white/20
-              "
-            >
-              <Image
-                src="/images/hero.jpeg"
-                alt=""
-                fill
-                className="object-cover scale-110"
-              />
-            </div>
-
-            {/* Bottom Right */}
-
-            <div
-              className="
-              absolute
-              right-[26%]
-              bottom-0
-
-              w-32
-              h-32
-
-              rounded-full
-              overflow-hidden
-              border-2
-              border-white/20
-              "
-            >
-              <Image
-                src="/images/hero.jpeg"
-                alt=""
-                fill
-                className="object-cover scale-110"
-              />
-            </div>
-
-          </div>
-        </div>
-
-        {/* ========================================= */}
-        {/* MOBILE COLLAGE */}
-        {/* ========================================= */}
-
-        <div className="md:hidden mt-16">
-                    <div className="flex flex-col items-center gap-5">
-
-            {/* Top */}
-
-            <div className="flex gap-5">
-
-              <div className="relative w-20 h-20 rounded-full overflow-hidden border border-white/20">
-                <Image
-                  src="/images/hero.jpeg"
-                  alt=""
-                  fill
-                  className="object-cover"
-                />
-              </div>
-
-              <div className="relative w-20 h-20 rounded-full overflow-hidden border border-white/20">
-                <Image
-                  src="/images/hero.jpeg"
-                  alt=""
-                  fill
-                  className="object-cover"
-                />
-              </div>
-
-            </div>
-
-            {/* Main */}
-
-            <div className="relative w-56 h-56 rounded-full overflow-hidden border-[4px] border-white/30 shadow-2xl">
-
-              <Image
-                src="/images/hero.jpeg"
-                alt=""
-                fill
-                priority
-                className="object-cover"
-              />
-
-            </div>
-
-            {/* Middle */}
-
-            <div className="flex gap-5">
-
-              <div className="relative w-28 h-28 rounded-full overflow-hidden border border-white/20">
-
-                <Image
-                  src="/images/hero.jpeg"
-                  alt=""
-                  fill
-                  className="object-cover"
-                />
-
-              </div>
-
-              <div className="relative w-28 h-28 rounded-full overflow-hidden border border-white/20">
-
-                <Image
-                  src="/images/hero.jpeg"
-                  alt=""
-                  fill
-                  className="object-cover"
-                />
-
-              </div>
-
-            </div>
-
-            {/* Bottom */}
-
-            <div className="flex gap-5">
-
-              <div className="relative w-20 h-20 rounded-full overflow-hidden border border-white/20">
-
-                <Image
-                  src="/images/hero.jpeg"
-                  alt=""
-                  fill
-                  className="object-cover"
-                />
-
-              </div>
-
-              <div className="relative w-20 h-20 rounded-full overflow-hidden border border-white/20">
-
-                <Image
-                  src="/images/hero.jpeg"
-                  alt=""
-                  fill
-                  className="object-cover"
-                />
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
 
       </div>
 
@@ -447,12 +159,14 @@ export default function Hero() {
         className="
         absolute
         left-1/2
-        top-[72%]
+        top-20
         -translate-x-1/2
-        -translate-y-1/2
 
-        w-[700px]
-        h-[700px]
+        w-[350px]
+        h-[350px]
+
+        md:w-[700px]
+        md:h-[700px]
 
         rounded-full
         bg-white/5
