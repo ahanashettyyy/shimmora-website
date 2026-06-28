@@ -32,11 +32,7 @@ return(
 
 <div className="fixed inset-0 bg-[#700342] flex flex-col items-center justify-center z-[9999] text-white">
 
-<div className="text-5xl mb-6">
 
-✨
-
-</div>
 
 <h1 className="text-5xl mb-4">
 
