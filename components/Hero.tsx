@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Glitter from "@/components/Glitter";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -15,41 +16,18 @@ export default function Hero() {
     >
       <Glitter />
 
-      <div
-        className="
-        max-w-7xl
-        mx-auto
-        px-6
-        md:px-10
-        pt-36
-        pb-20
-        relative
-        z-10
-      "
-      >
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-36 pb-20 relative z-10">
+
         {/* TEXT */}
 
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{
-            duration: .8,
-          }}
-          className="
-          max-w-4xl
-          mx-auto
-          text-center
-        "
+          transition={{ duration: .8 }}
+          className="text-center max-w-4xl mx-auto"
         >
-          <p
-            className="
-            uppercase
-            tracking-[6px]
-            text-sm
-            text-[#F9EDF0]/80
-            mb-6
-          "
-          >
+
+          <p className="uppercase tracking-[6px] text-sm text-[#F9EDF0]/80 mb-6">
             Bangalore Based
           </p>
 
@@ -60,8 +38,8 @@ export default function Hero() {
             tracking-tight
             text-5xl
             sm:text-6xl
-            lg:text-[100px]
-          "
+            lg:text-[96px]
+            "
           >
             The Shimmora Bar
           </h1>
@@ -69,31 +47,29 @@ export default function Hero() {
           <p
             className="
             mt-8
-            max-w-2xl
-            mx-auto
             text-lg
             md:text-xl
             leading-9
+            max-w-2xl
+            mx-auto
             text-[#F9EDF0]/90
-          "
+            "
           >
-            Luxury glitter experiences, premium face glitter,
-            body art and magical event styling for weddings,
-            concerts, birthdays and unforgettable celebrations.
+            Luxury face glitter, body glitter and magical event experiences
+            for weddings, concerts, birthdays and unforgettable celebrations.
           </p>
-
-          {/* BUTTONS */}
 
           <div
             className="
+            mt-12
             flex
             flex-col
             sm:flex-row
             justify-center
             gap-5
-            mt-12
-          "
+            "
           >
+
             <a
               href="https://wa.me/919110832295?text=Hi! I'd like to book The Shimmora Bar for my event."
               target="_blank"
@@ -102,24 +78,24 @@ export default function Hero() {
               group
               bg-[#F9EDF0]
               text-[#700342]
+              rounded-full
               px-8
               py-4
-              rounded-full
               flex
               items-center
               justify-center
               gap-3
-              font-medium
               hover:scale-105
               transition
-            "
+              "
             >
               BOOK NOW
 
               <ArrowRight
                 size={18}
-                className="transition group-hover:translate-x-1"
+                className="group-hover:translate-x-1 transition"
               />
+
             </a>
 
             <a
@@ -128,9 +104,9 @@ export default function Hero() {
               group
               border
               border-[#F9EDF0]
+              rounded-full
               px-8
               py-4
-              rounded-full
               flex
               items-center
               justify-center
@@ -138,123 +114,204 @@ export default function Hero() {
               hover:bg-[#F9EDF0]
               hover:text-[#700342]
               transition
-            "
+              "
             >
               VIEW GALLERY
 
               <ArrowRight
                 size={18}
-                className="transition group-hover:translate-x-1"
+                className="group-hover:translate-x-1 transition"
               />
+
             </a>
+
           </div>
+
         </motion.div>
 
-        {/* ========================= */}
-        {/* CIRCLE BANNER STARTS HERE */}
-        {/* ========================= */}
+        {/* ===================== */}
+        {/* CIRCLE BANNER */}
+        {/* ===================== */}
 
         <motion.div
           initial={{ opacity: 0, y: 80 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{
-            delay: .4,
-            duration: 1,
-          }}
-          className="
-          mt-24
-          flex
-          justify-center
-        "
+          transition={{ delay: .4 }}
+          className="mt-24 flex justify-center"
         >
+
           <div
             className="
             relative
             w-full
             max-w-6xl
-            h-[420px]
-            md:h-[520px]
-          "
+
+            h-[620px]
+
+            md:h-[500px]
+            "
           >
-                        {/* Left Large */}
+                        {/* ===== LEFT LARGE ===== */}
 
             <div
               className="
               absolute
-              left-0
-              top-24
-              w-48
-              h-48
+
+              left-[-2%]
+              md:left-0
+
+              top-52
+              md:top-24
+
+              w-40
+              h-40
+
+              sm:w-52
+              sm:h-52
+
               md:w-72
               md:h-72
+
               rounded-full
               bg-white/10
               border
               border-white/20
               backdrop-blur-md
-              overflow-hidden
               shadow-2xl
               "
-            >
-              {/* Replace later with banner1 */}
-            </div>
+            />
 
-            {/* Center Main */}
+            {/* ===== CENTER ===== */}
 
             <div
               className="
               absolute
+
               left-1/2
-              top-10
               -translate-x-1/2
+
+              top-24
+              md:top-10
+
               w-64
               h-64
+
+              sm:w-72
+              sm:h-72
+
               md:w-[340px]
               md:h-[340px]
+
               rounded-full
               bg-[#F9EDF0]/10
               border-2
               border-white/30
               backdrop-blur-md
-              overflow-hidden
               shadow-[0_25px_80px_rgba(0,0,0,.25)]
               z-20
               "
-            >
-              {/* Main Image Later */}
-            </div>
+            />
 
-            {/* Right Large */}
+            {/* ===== RIGHT LARGE ===== */}
 
             <div
               className="
               absolute
-              right-0
-              top-24
-              w-48
-              h-48
+
+              right-[-2%]
+              md:right-0
+
+              top-52
+              md:top-24
+
+              w-40
+              h-40
+
+              sm:w-52
+              sm:h-52
+
               md:w-72
               md:h-72
+
               rounded-full
               bg-white/10
               border
               border-white/20
               backdrop-blur-md
-              overflow-hidden
               shadow-2xl
               "
-            >
-            </div>
+            />
 
-            {/* Small Top Left */}
+            {/* ===== TOP LEFT ===== */}
 
             <div
               className="
               absolute
-              left-[16%]
-              top-2
+
+              left-[18%]
+              md:left-[18%]
+
+              top-8
+              md:top-0
+
+              w-20
+              h-20
+
+              md:w-28
+              md:h-28
+
+              rounded-full
+              bg-white/10
+              border
+              border-white/20
+              backdrop-blur-md
+              "
+            />
+
+            {/* ===== TOP RIGHT ===== */}
+
+            <div
+              className="
+              absolute
+
+              right-[18%]
+              md:right-[18%]
+
+              top-8
+              md:top-0
+
+              w-20
+              h-20
+
+              md:w-28
+              md:h-28
+
+              rounded-full
+              bg-white/10
+              border
+              border-white/20
+              backdrop-blur-md
+              "
+            />
+
+            {/* ===== BOTTOM LEFT ===== */}
+
+            <div
+              className="
+              absolute
+
+              left-[26%]
+              md:left-[24%]
+
+              bottom-20
+              md:bottom-0
+
               w-24
               h-24
+
+              md:w-32
+              md:h-32
+
               rounded-full
               bg-white/10
               border
@@ -263,15 +320,24 @@ export default function Hero() {
               "
             />
 
-            {/* Small Top Right */}
+            {/* ===== BOTTOM RIGHT ===== */}
 
             <div
               className="
               absolute
-              right-[16%]
-              top-2
+
+              right-[26%]
+              md:right-[24%]
+
+              bottom-20
+              md:bottom-0
+
               w-24
               h-24
+
+              md:w-32
+              md:h-32
+
               rounded-full
               bg-white/10
               border
@@ -279,61 +345,47 @@ export default function Hero() {
               backdrop-blur-md
               "
             />
-
-            {/* Small Bottom Left */}
-
-            <div
-              className="
-              absolute
-              left-[24%]
-              bottom-0
-              w-28
-              h-28
-              rounded-full
-              bg-white/10
-              border
-              border-white/20
-              backdrop-blur-md
-              "
-            />
-
-            {/* Small Bottom Right */}
-
-            <div
-              className="
-              absolute
-              right-[24%]
-              bottom-0
-              w-28
-              h-28
-              rounded-full
-              bg-white/10
-              border
-              border-white/20
-              backdrop-blur-md
-              "
-            />
-
-          </div>
+                      </div>
         </motion.div>
-
       </div>
+
+      {/* Background Glow */}
+
+      <div
+        className="
+          absolute
+          left-1/2
+          top-[68%]
+          -translate-x-1/2
+          -translate-y-1/2
+
+          w-[500px]
+          h-[500px]
+
+          md:w-[800px]
+          md:h-[800px]
+
+          rounded-full
+          bg-white/5
+          blur-[140px]
+          pointer-events-none
+        "
+      />
 
       {/* Bottom Fade */}
 
       <div
         className="
-        absolute
-        bottom-0
-        left-0
-        w-full
-        h-32
-        bg-gradient-to-b
-        from-transparent
-        to-[#F9EDF0]
+          absolute
+          bottom-0
+          left-0
+          w-full
+          h-32
+          bg-gradient-to-b
+          from-transparent
+          to-[#F9EDF0]
         "
       />
-
     </section>
   );
 }
