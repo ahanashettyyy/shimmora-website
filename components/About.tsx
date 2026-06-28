@@ -18,15 +18,15 @@ export default function About() {
           {/* Left */}
 
           <div>
-
+             <DIV>
             <h2 className="text-5xl md:text-6xl font-light text-[#700342] leading-tight mb-4">
               We create unforgettable glitter experiences.
-            </h2>
-
+            </h2> </DIV>
+<DIV>
             <p className="text-lg text-gray-700 leading-8 mb-8">
               The Shimmora Bar transforms celebrations with luxury face glitter, body art and premium event experiences. Whether it's weddings, concerts, birthdays or college festivals—we bring sparkle that people remember.
             </p>
-
+</DIV>
            <a
   href="#services"
   className="
