@@ -5,7 +5,7 @@ export default function Gallery() {
   const images = [
     {
       src: "gallery1.jpg",
-      title: "Wedding ✨",
+      title: "Wedding",
     },
     {
       src: "gallery2.jpg",
@@ -43,6 +43,8 @@ export default function Gallery() {
         <h2 className="text-3xl md:text-6xl text-[#700342] mb-12 md:mb-16">
           Gallery
         </h2>
+
+        <div className="h-4 md:h-6" />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
