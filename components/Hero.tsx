@@ -32,18 +32,25 @@ export default function Hero() {
           <div
             className="
             relative
-
             w-[300px]
             h-[140px]
-
             sm:w-[380px]
             sm:h-[170px]
-
             md:w-[720px]
             md:h-[220px]
+            overflow-hidden
+            rounded-[32px]
+            shadow-[0_40px_100px_rgba(112,3,66,0.35)]
             "
           >
-                      </div>
+            <Image
+              src="/images/hero.jpeg"
+              alt="The Shimmora Bar event glitter"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
         </motion.div>
 
         {/* ========================= */}
