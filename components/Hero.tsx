@@ -19,61 +19,37 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-24 md:pt-32 pb-24 relative z-10">
 
         {/* ========================= */}
-        {/* HERO CIRCLE ROW */}
+        {/* PHOTO BANNER */}
         {/* ========================= */}
 
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: .8 }}
-          className="relative mx-auto mb-12 w-full max-w-[320px] sm:max-w-[420px] md:max-w-[760px]"
+          className="flex justify-center mb-12"
         >
-          <div className="relative h-[210px] sm:h-[240px] md:h-[280px]">
-            {[
-              {
-                size: "w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28",
-                position: "top-[8%] left-[4%]",
-                z: "z-10",
-              },
-              {
-                size: "w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32",
-                position: "top-[2%] left-[30%]",
-                z: "z-20",
-              },
-              {
-                size: "w-32 h-32 sm:w-36 sm:h-36 md:w-44 md:h-44",
-                position: "top-0 right-[4%]",
-                z: "z-30",
-              },
-              {
-                size: "w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32",
-                position: "top-[42%] left-[6%]",
-                z: "z-10",
-              },
-              {
-                size: "w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28",
-                position: "top-[52%] left-[38%]",
-                z: "z-20",
-              },
-              {
-                size: "w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32",
-                position: "top-[38%] right-[8%]",
-                z: "z-10",
-              },
-            ].map((circle, index) => (
-              <div
-                key={index}
-                className={`absolute ${circle.position} ${circle.z} ${circle.size} overflow-hidden rounded-full border border-white/20 shadow-[0_20px_80px_rgba(0,0,0,0.12)]`}
-              >
-                <Image
-                  src="/images/hero.jpeg"
-                  alt={`The Shimmora Bar hero circle ${index + 1}`}
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
-            ))}
+
+          <div
+            className="
+            relative
+            w-[300px]
+            h-[140px]
+            sm:w-[380px]
+            sm:h-[170px]
+            md:w-[720px]
+            md:h-[220px]
+            overflow-hidden
+            rounded-[32px]
+            shadow-[0_40px_100px_rgba(112,3,66,0.35)]
+            "
+          >
+            <Image
+              src="/images/hero.jpeg"
+              alt="The Shimmora Bar event glitter"
+              fill
+              className="object-cover"
+              priority
+            />
           </div>
         </motion.div>
 
