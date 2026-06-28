@@ -23,6 +23,8 @@ export default function About() {
               We create unforgettable glitter experiences.
             </h2>
 
+            <div className="h-4 md:h-6" />
+
             <p className="text-lg text-gray-700 leading-8 mb-8">
               The Shimmora Bar transforms celebrations with luxury face glitter, body art and premium event experiences. Whether it's weddings, concerts, birthdays or college festivals—we bring sparkle that people remember.
             </p>
