@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
+import PageTransition from "@/components/PageTransition";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -26,10 +27,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${poppins.variable} ${cormorant.variable} antialiased`}
-      >
-        {children}
+      <body className={`${poppins.variable} ${cormorant.variable} antialiased`}>
+        <PageTransition>{children}</PageTransition>
       </body>
     </html>
   );

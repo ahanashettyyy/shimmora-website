@@ -8,6 +8,7 @@ import WhyUs from "@/components/WhyUs";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import Loader from "@/components/Loader";
+import FadeIn from "@/components/FadeIn";
 
 export default function Home() {
   return (
@@ -17,13 +18,30 @@ export default function Home() {
 
       <Hero />
 
-      <About />
-      <Services />
-      <Events />
-      <Gallery />
-      <WhyUs />
-      <CTA />
-      
+      <FadeIn>
+        <About />
+      </FadeIn>
+
+      <FadeIn>
+        <Services />
+      </FadeIn>
+
+      <FadeIn>
+        <Events />
+      </FadeIn>
+
+      <FadeIn>
+        <Gallery />
+      </FadeIn>
+
+      <FadeIn>
+        <WhyUs />
+      </FadeIn>
+
+      <FadeIn>
+        <CTA />
+      </FadeIn>
+
       <Footer />
         </Loader>
     </main>
