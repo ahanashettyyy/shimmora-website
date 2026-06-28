@@ -25,7 +25,7 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto h-24 px-6 md:px-10 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto h-20 md:h-24 px-6 md:px-10 flex items-center justify-between">
 
         <div className="flex items-center gap-4">
           <Image
@@ -65,8 +65,8 @@ export default function Navbar() {
 
       </div>
 
-      {/* Mobile menu */}
-      <div className={`md:hidden ${open ? "block" : "hidden"} bg-[#700342]/95`}>
+      {/* Mobile menu (fixed below nav) */}
+      <div className={`md:hidden ${open ? "block fixed" : "hidden"} left-0 right-0 bg-[#700342]/95`} style={{ top: "5rem" }}>
         <div className="px-6 pb-6 pt-4 flex flex-col gap-4 text-white uppercase tracking-[2px]">
           <a href="#about" onClick={() => setOpen(false)}>About</a>
           <a href="#services" onClick={() => setOpen(false)}>Services</a>

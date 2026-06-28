@@ -11,7 +11,7 @@ import Loader from "@/components/Loader";
 
 export default function Home() {
   return (
-    <main>
+    <main className="pt-20 md:pt-24">
        <Loader>
       <Navbar />
 
