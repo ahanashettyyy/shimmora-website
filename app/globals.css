@@ -49,6 +49,11 @@ html{
   scroll-behavior:smooth;
 }
 
+/* Prevent horizontal overflow on small screens */
+html, body, #__next {
+  overflow-x: hidden;
+}
+
 .btn-primary{
   background:#F9EDF0;
   color:#700342;

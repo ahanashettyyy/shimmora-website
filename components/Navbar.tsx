@@ -66,8 +66,9 @@ export default function Navbar() {
       </div>
 
       {/* Mobile menu (fixed below nav) */}
-      <div className={`md:hidden ${open ? "block fixed" : "hidden"} left-0 right-0 bg-[#700342]/95`} style={{ top: "5rem" }}>
-        <div className="px-6 pb-6 pt-4 flex flex-col gap-4 text-white uppercase tracking-[2px]">
+      <div className={`md:hidden ${open ? "fixed inset-x-0 top-20 bottom-0 z-50" : "hidden"}`}>
+        <div className="absolute inset-0 bg-[#700342]/95" />
+        <div className="relative h-full overflow-auto px-6 pb-8 pt-6 flex flex-col gap-6 text-white uppercase tracking-[2px]">
           <a href="#about" onClick={() => setOpen(false)}>About</a>
           <a href="#services" onClick={() => setOpen(false)}>Services</a>
           <a href="#gallery" onClick={() => setOpen(false)}>Gallery</a>

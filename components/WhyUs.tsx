@@ -43,14 +43,14 @@ export default function WhyUs() {
 
             <div
               key={item.title}
-              className="bg-[#F9EDF0] rounded-[30px] p-10"
+              className="bg-[#F9EDF0] rounded-[30px] p-8 w-full max-w-[320px] mx-auto sm:mx-0"
             >
 
-              <h3 className="text-5xl text-[#700342] mb-5">
+              <h3 className="text-4xl md:text-5xl text-[#700342] mb-4">
                 {item.number}
               </h3>
 
-              <h4 className="text-2xl text-[#700342] mb-2">
+              <h4 className="text-xl md:text-2xl text-[#700342] mb-2">
                 {item.title}
               </h4>
 

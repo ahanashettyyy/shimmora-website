@@ -22,22 +22,22 @@ export default function Services() {
 
             <div
               key={service}
-              className="bg-[#F9EDF0] rounded-[30px] overflow-hidden"
+              className="bg-[#F9EDF0] rounded-[30px] overflow-hidden w-full max-w-[360px] mx-auto sm:mx-0"
             >
 
-              <div className="aspect-[4/3] bg-[#C13494]/20 flex items-center justify-center">
+              <div className="h-40 sm:h-52 md:h-64 bg-[#C13494]/20 flex items-center justify-center">
 
                 IMAGE
 
               </div>
 
-              <div className="p-8">
+              <div className="p-6 sm:p-8">
 
-                <h3 className="text-2xl text-[#700342] mb-4">
+                <h3 className="text-xl md:text-2xl text-[#700342] mb-4 text-center sm:text-left">
                   {service}
                 </h3>
 
-                <p className="text-gray-700 leading-7">
+                <p className="text-gray-700 leading-7 text-center sm:text-left">
                   Short description goes here.
                 </p>
 

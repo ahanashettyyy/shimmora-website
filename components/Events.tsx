@@ -31,22 +31,12 @@ export default function Events() {
 
             <div
               key={event}
-              className="
-              bg-white
-              rounded-[25px]
-              p-8
-              shadow-md
-              hover:-translate-y-2
-              hover:shadow-xl
-              transition
-              duration-300
-              cursor-pointer
-              "
+              className="bg-white rounded-[25px] p-6 sm:p-8 shadow-md hover:-translate-y-2 hover:shadow-xl transition duration-300 cursor-pointer w-full max-w-[360px] mx-auto sm:mx-0"
             >
 
-              <div className="w-14 h-14 rounded-full bg-[#C13494]/20 mb-6"></div>
+              <div className="w-12 h-12 rounded-full bg-[#C13494]/20 mb-4"></div>
 
-              <h3 className="text-2xl text-[#700342] mb-3">
+              <h3 className="text-xl md:text-2xl text-[#700342] mb-3">
                 {event}
               </h3>
 
