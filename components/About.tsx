@@ -13,23 +13,18 @@ export default function About() {
           WHO WE ARE
         </p>
 
-        <div className="grid grid-cols-2 gap-24 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
 
           {/* Left */}
 
           <div>
 
-            <h2 className="text-6xl font-light text-[#700342] leading-tight mb-8">
+            <h2 className="text-5xl md:text-6xl font-light text-[#700342] leading-tight mb-4">
               We create unforgettable glitter experiences.
             </h2>
 
             <p className="text-lg text-gray-700 leading-8 mb-8">
-              The Shimmora Bar transforms celebrations
-              with luxury face glitter, body art and
-              premium event experiences. Whether it's
-              weddings, concerts, birthdays or college
-              festivals—we bring sparkle that people
-              remember.
+              The Shimmora Bar transforms celebrations with luxury face glitter, body art and premium event experiences. Whether it's weddings, concerts, birthdays or college festivals—we bring sparkle that people remember.
             </p>
 
            <a
