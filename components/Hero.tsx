@@ -1,9 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Glitter from "@/components/Glitter";
-import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -21,24 +21,24 @@ export default function Hero() {
         {/* TEXT */}
 
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 35 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: .8 }}
           className="text-center max-w-4xl mx-auto"
         >
 
-          <p className="uppercase tracking-[6px] text-sm text-[#F9EDF0]/80 mb-6">
+          <p className="uppercase tracking-[6px] text-sm text-[#F9EDF0]/80 mb-5">
             Bangalore Based
           </p>
 
           <h1
             className="
+            text-5xl
+            sm:text-6xl
+            lg:text-[95px]
             font-light
             leading-none
             tracking-tight
-            text-5xl
-            sm:text-6xl
-            lg:text-[96px]
             "
           >
             The Shimmora Bar
@@ -47,16 +47,19 @@ export default function Hero() {
           <p
             className="
             mt-8
+            max-w-2xl
+            mx-auto
             text-lg
             md:text-xl
             leading-9
-            max-w-2xl
-            mx-auto
             text-[#F9EDF0]/90
             "
           >
-            Luxury face glitter, body glitter and magical event experiences
-            for weddings, concerts, birthdays and unforgettable celebrations.
+            Luxury face glitter,
+            body glitter and magical event experiences
+            for weddings,
+            concerts,
+            birthdays and unforgettable celebrations.
           </p>
 
           <div
@@ -73,17 +76,16 @@ export default function Hero() {
             <a
               href="https://wa.me/919110832295?text=Hi! I'd like to book The Shimmora Bar for my event."
               target="_blank"
-              rel="noopener noreferrer"
               className="
               group
+              rounded-full
               bg-[#F9EDF0]
               text-[#700342]
-              rounded-full
               px-8
               py-4
               flex
-              items-center
               justify-center
+              items-center
               gap-3
               hover:scale-105
               transition
@@ -95,23 +97,22 @@ export default function Hero() {
                 size={18}
                 className="group-hover:translate-x-1 transition"
               />
-
             </a>
 
             <a
               href="#gallery"
               className="
               group
+              rounded-full
               border
               border-[#F9EDF0]
-              rounded-full
               px-8
               py-4
               flex
-              items-center
               justify-center
+              items-center
               gap-3
-              hover:bg-[#F9EDF0]
+              hover:bg-white
               hover:text-[#700342]
               transition
               "
@@ -122,253 +123,341 @@ export default function Hero() {
                 size={18}
                 className="group-hover:translate-x-1 transition"
               />
-
             </a>
 
           </div>
 
         </motion.div>
 
-        {/* ===================== */}
-        {/* CIRCLE BANNER */}
-        {/* ===================== */}
+        {/* ========================================= */}
+        {/* DESKTOP COLLAGE */}
+        {/* ========================================= */}
 
-        <motion.div
-          initial={{ opacity: 0, y: 80 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: .4 }}
-          className="mt-24 flex justify-center"
-        >
+        <div className="hidden md:flex justify-center mt-24">
 
           <div
             className="
             relative
             w-full
             max-w-6xl
-
-            h-[620px]
-
-            md:h-[500px]
+            h-[520px]
             "
           >
-                        {/* ===== LEFT LARGE ===== */}
+                        {/* Left Large */}
 
-            <div
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: .3 }}
               className="
               absolute
-
-              left-[-2%]
-              md:left-0
-
-              top-52
-              md:top-24
-
-              w-40
-              h-40
-
-              sm:w-52
-              sm:h-52
-
-              md:w-72
-              md:h-72
-
+              left-0
+              top-28
+              w-72
+              h-72
               rounded-full
-              bg-white/10
-              border
+              overflow-hidden
+              border-4
               border-white/20
-              backdrop-blur-md
               shadow-2xl
               "
-            />
+            >
+              <Image
+                src="/images/hero.jpeg"
+                alt=""
+                fill
+                className="object-cover scale-110"
+              />
+            </motion.div>
 
-            {/* ===== CENTER ===== */}
+            {/* Center */}
 
-            <div
+            <motion.div
+              initial={{ opacity: 0, scale: .8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: .4 }}
               className="
               absolute
-
               left-1/2
+              top-0
               -translate-x-1/2
 
-              top-24
-              md:top-10
-
-              w-64
-              h-64
-
-              sm:w-72
-              sm:h-72
-
-              md:w-[340px]
-              md:h-[340px]
+              w-[360px]
+              h-[360px]
 
               rounded-full
-              bg-[#F9EDF0]/10
-              border-2
+              overflow-hidden
+              border-[5px]
               border-white/30
-              backdrop-blur-md
-              shadow-[0_25px_80px_rgba(0,0,0,.25)]
+              shadow-[0_35px_100px_rgba(0,0,0,.35)]
               z-20
               "
-            />
+            >
+              <Image
+                src="/images/hero.jpeg"
+                alt=""
+                fill
+                priority
+                className="object-cover scale-110"
+              />
+            </motion.div>
 
-            {/* ===== RIGHT LARGE ===== */}
+            {/* Right Large */}
 
-            <div
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: .5 }}
               className="
               absolute
+              right-0
+              top-28
 
-              right-[-2%]
-              md:right-0
-
-              top-52
-              md:top-24
-
-              w-40
-              h-40
-
-              sm:w-52
-              sm:h-52
-
-              md:w-72
-              md:h-72
+              w-72
+              h-72
 
               rounded-full
-              bg-white/10
-              border
+              overflow-hidden
+              border-4
               border-white/20
-              backdrop-blur-md
               shadow-2xl
               "
-            />
+            >
+              <Image
+                src="/images/hero.jpeg"
+                alt=""
+                fill
+                className="object-cover scale-110"
+              />
+            </motion.div>
 
-            {/* ===== TOP LEFT ===== */}
+            {/* Top Left */}
 
             <div
               className="
               absolute
-
               left-[18%]
-              md:left-[18%]
+              top-0
 
-              top-8
-              md:top-0
-
-              w-20
-              h-20
-
-              md:w-28
-              md:h-28
+              w-28
+              h-28
 
               rounded-full
-              bg-white/10
-              border
+              overflow-hidden
+              border-2
               border-white/20
-              backdrop-blur-md
               "
-            />
+            >
+              <Image
+                src="/images/hero.jpeg"
+                alt=""
+                fill
+                className="object-cover scale-110"
+              />
+            </div>
 
-            {/* ===== TOP RIGHT ===== */}
+            {/* Top Right */}
 
             <div
               className="
               absolute
-
               right-[18%]
-              md:right-[18%]
+              top-0
 
-              top-8
-              md:top-0
-
-              w-20
-              h-20
-
-              md:w-28
-              md:h-28
+              w-28
+              h-28
 
               rounded-full
-              bg-white/10
-              border
+              overflow-hidden
+              border-2
               border-white/20
-              backdrop-blur-md
               "
-            />
+            >
+              <Image
+                src="/images/hero.jpeg"
+                alt=""
+                fill
+                className="object-cover scale-110"
+              />
+            </div>
 
-            {/* ===== BOTTOM LEFT ===== */}
+            {/* Bottom Left */}
 
             <div
               className="
               absolute
-
               left-[26%]
-              md:left-[24%]
+              bottom-0
 
-              bottom-20
-              md:bottom-0
-
-              w-24
-              h-24
-
-              md:w-32
-              md:h-32
+              w-32
+              h-32
 
               rounded-full
-              bg-white/10
-              border
+              overflow-hidden
+              border-2
               border-white/20
-              backdrop-blur-md
               "
-            />
+            >
+              <Image
+                src="/images/hero.jpeg"
+                alt=""
+                fill
+                className="object-cover scale-110"
+              />
+            </div>
 
-            {/* ===== BOTTOM RIGHT ===== */}
+            {/* Bottom Right */}
 
             <div
               className="
               absolute
-
               right-[26%]
-              md:right-[24%]
+              bottom-0
 
-              bottom-20
-              md:bottom-0
-
-              w-24
-              h-24
-
-              md:w-32
-              md:h-32
+              w-32
+              h-32
 
               rounded-full
-              bg-white/10
-              border
+              overflow-hidden
+              border-2
               border-white/20
-              backdrop-blur-md
               "
-            />
-                      </div>
-        </motion.div>
+            >
+              <Image
+                src="/images/hero.jpeg"
+                alt=""
+                fill
+                className="object-cover scale-110"
+              />
+            </div>
+
+          </div>
+        </div>
+
+        {/* ========================================= */}
+        {/* MOBILE COLLAGE */}
+        {/* ========================================= */}
+
+        <div className="md:hidden mt-16">
+                    <div className="flex flex-col items-center gap-5">
+
+            {/* Top */}
+
+            <div className="flex gap-5">
+
+              <div className="relative w-20 h-20 rounded-full overflow-hidden border border-white/20">
+                <Image
+                  src="/images/hero.jpeg"
+                  alt=""
+                  fill
+                  className="object-cover"
+                />
+              </div>
+
+              <div className="relative w-20 h-20 rounded-full overflow-hidden border border-white/20">
+                <Image
+                  src="/images/hero.jpeg"
+                  alt=""
+                  fill
+                  className="object-cover"
+                />
+              </div>
+
+            </div>
+
+            {/* Main */}
+
+            <div className="relative w-56 h-56 rounded-full overflow-hidden border-[4px] border-white/30 shadow-2xl">
+
+              <Image
+                src="/images/hero.jpeg"
+                alt=""
+                fill
+                priority
+                className="object-cover"
+              />
+
+            </div>
+
+            {/* Middle */}
+
+            <div className="flex gap-5">
+
+              <div className="relative w-28 h-28 rounded-full overflow-hidden border border-white/20">
+
+                <Image
+                  src="/images/hero.jpeg"
+                  alt=""
+                  fill
+                  className="object-cover"
+                />
+
+              </div>
+
+              <div className="relative w-28 h-28 rounded-full overflow-hidden border border-white/20">
+
+                <Image
+                  src="/images/hero.jpeg"
+                  alt=""
+                  fill
+                  className="object-cover"
+                />
+
+              </div>
+
+            </div>
+
+            {/* Bottom */}
+
+            <div className="flex gap-5">
+
+              <div className="relative w-20 h-20 rounded-full overflow-hidden border border-white/20">
+
+                <Image
+                  src="/images/hero.jpeg"
+                  alt=""
+                  fill
+                  className="object-cover"
+                />
+
+              </div>
+
+              <div className="relative w-20 h-20 rounded-full overflow-hidden border border-white/20">
+
+                <Image
+                  src="/images/hero.jpeg"
+                  alt=""
+                  fill
+                  className="object-cover"
+                />
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
 
-      {/* Background Glow */}
+      {/* Glow */}
 
       <div
         className="
-          absolute
-          left-1/2
-          top-[68%]
-          -translate-x-1/2
-          -translate-y-1/2
+        absolute
+        left-1/2
+        top-[72%]
+        -translate-x-1/2
+        -translate-y-1/2
 
-          w-[500px]
-          h-[500px]
+        w-[700px]
+        h-[700px]
 
-          md:w-[800px]
-          md:h-[800px]
-
-          rounded-full
-          bg-white/5
-          blur-[140px]
-          pointer-events-none
+        rounded-full
+        bg-white/5
+        blur-[140px]
+        pointer-events-none
         "
       />
 
@@ -376,16 +465,17 @@ export default function Hero() {
 
       <div
         className="
-          absolute
-          bottom-0
-          left-0
-          w-full
-          h-32
-          bg-gradient-to-b
-          from-transparent
-          to-[#F9EDF0]
+        absolute
+        bottom-0
+        left-0
+        w-full
+        h-28
+        bg-gradient-to-b
+        from-transparent
+        to-[#F9EDF0]
         "
       />
+
     </section>
   );
 }
