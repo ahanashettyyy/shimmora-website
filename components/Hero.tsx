@@ -19,38 +19,31 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-24 md:pt-32 pb-24 relative z-10">
 
         {/* ========================= */}
-        {/* PHOTO BANNER */}
+        {/* HERO CIRCLE ROW */}
         {/* ========================= */}
 
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: .8 }}
-          className="flex justify-center mb-12"
+          className="flex flex-wrap justify-center gap-4 mb-12"
         >
-
-          <div
-            className="
-            relative
-            w-[300px]
-            h-[140px]
-            sm:w-[380px]
-            sm:h-[170px]
-            md:w-[720px]
-            md:h-[220px]
-            overflow-hidden
-            rounded-[32px]
-            shadow-[0_40px_100px_rgba(112,3,66,0.35)]
-            "
-          >
-            <Image
-              src="/images/hero.jpeg"
-              alt="The Shimmora Bar event glitter"
-              fill
-              className="object-cover"
-              priority
-            />
-          </div>
+          {[...Array(6)].map((_, index) => (
+            <div
+              key={index}
+              className={`relative overflow-hidden rounded-full border border-white/20 shadow-[0_20px_80px_rgba(0,0,0,0.12)] ${
+                index === 2 ? "w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36" : "w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28"
+              }`}
+            >
+              <Image
+                src="/images/hero.jpeg"
+                alt="The Shimmora Bar hero circle"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+          ))}
         </motion.div>
 
         {/* ========================= */}
