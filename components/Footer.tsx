@@ -3,10 +3,10 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <footer className="bg-[#53002b] text-[#F9EDF0] pt-24 pb-10">
-      <div className="max-w-[1320px] mx-auto px-10">
+      <div className="max-w-[1320px] mx-auto px-6 md:px-10">
 
         {/* Top Footer */}
-        <div className="grid grid-cols-[1.2fr_1fr_1fr] gap-24 items-start pb-16">
+        <div className="grid grid-cols-1 md:grid-cols-[1.2fr_1fr_1fr] gap-12 md:gap-24 items-start pb-16">
 
           {/* Left */}
           <div className="flex flex-col">
@@ -15,7 +15,7 @@ export default function Footer() {
               alt="The Shimmora Bar"
               width={220}
               height={80}
-              className="mb-8"
+              className="mb-8 max-w-[220px] w-full h-auto"
             />
 
             <p className="text-[#F9EDF0]/80 leading-9 max-w-[320px]">

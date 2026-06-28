@@ -6,13 +6,13 @@ export default function Services() {
       className="bg-[#700342] py-32"
     >
 
-      <div className="max-w-7xl mx-auto px-10">
+      <div className="max-w-7xl mx-auto px-6 md:px-10">
 
-        <h2 className="text-6xl text-[#F9EDF0] font-light text-center mb-20">
+        <h2 className="text-3xl md:text-6xl text-[#F9EDF0] font-light text-center mb-12 md:mb-20">
           What We Do
         </h2>
 
-        <div className="grid grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
 
           {[
             "Face Glitter",

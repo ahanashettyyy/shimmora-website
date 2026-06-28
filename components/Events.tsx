@@ -13,19 +13,19 @@ export default function Events() {
   return (
     <section className="bg-[#F9EDF0] py-32">
 
-      <div className="max-w-7xl mx-auto px-10">
+      <div className="max-w-7xl mx-auto px-6 md:px-10">
 
         <p className="uppercase tracking-[4px] text-[#C13494] mb-4">
           WHERE WE SHINE
         </p>
 
-        <h2 className="text-6xl font-light text-[#700342] mb-20">
+        <h2 className="text-3xl md:text-6xl font-light text-[#700342] mb-8 md:mb-20">
           Every celebration deserves
           <br />
           a little sparkle.
         </h2>
 
-        <div className="grid grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
           {events.map((event) => (
 

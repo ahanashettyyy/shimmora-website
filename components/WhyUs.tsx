@@ -25,19 +25,19 @@ export default function WhyUs() {
   return (
     <section className="bg-[#700342] py-32">
 
-      <div className="max-w-7xl mx-auto px-10">
+      <div className="max-w-7xl mx-auto px-6 md:px-10">
 
         <p className="uppercase tracking-[4px] text-[#F9EDF0] mb-4">
           WHY CHOOSE US
         </p>
 
-        <h2 className="text-6xl text-white font-light mb-20">
+        <h2 className="text-3xl md:text-6xl text-white font-light mb-12 md:mb-20">
           Creating unforgettable
           <br />
           moments with sparkle.
         </h2>
 
-        <div className="grid grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
           {stats.map((item) => (
 

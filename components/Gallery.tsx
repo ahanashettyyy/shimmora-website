@@ -34,27 +34,23 @@ export default function Gallery() {
       id="gallery"
       className="bg-[#F9EDF0] py-40"
     >
-      <div className="max-w-[1320px] mx-auto px-10">
+      <div className="max-w-[1320px] mx-auto px-6 md:px-10">
 
         <p className="uppercase tracking-[4px] text-[#C13494] mb-4">
           OUR WORK
         </p>
 
-        <h2 className="text-6xl text-[#700342] mb-16">
+        <h2 className="text-3xl md:text-6xl text-[#700342] mb-12 md:mb-16">
           Gallery
         </h2>
 
-        <div className="grid grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
           {images.map((image, index) => (
 
             <div
               key={index}
-              className={`relative overflow-hidden rounded-[32px] group cursor-pointer ${
-                index === 1 || index === 4
-                  ? "h-[520px]"
-                  : "h-[380px]"
-              }`}
+              className={`relative overflow-hidden rounded-[32px] group cursor-pointer aspect-[4/3]`}
             >
 
               <Image
