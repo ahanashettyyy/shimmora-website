@@ -19,7 +19,7 @@ export default function About() {
 
           <div>
 
-            <h2 className="text-3xl md:text-6xl font-light text-[#700342] leading-tight mb-8">
+            <h2 className="text-3xl md:text-6xl font-light text-[#700342] leading-tight mb-4">
               We create unforgettable glitter experiences.
             </h2>
 
