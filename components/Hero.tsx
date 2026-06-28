@@ -26,18 +26,37 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: .8 }}
-          className="flex flex-wrap justify-center gap-4 mb-12"
+          className="flex flex-wrap justify-center items-center gap-4 mb-12"
         >
-          {[...Array(6)].map((_, index) => (
+          {[
+            {
+              size: "w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28",
+              offset: "translate-y-8 sm:translate-y-6 md:translate-y-8",
+            },
+            {
+              size: "w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32",
+              offset: "-translate-y-4 sm:-translate-y-6 md:-translate-y-8",
+            },
+            {
+              size: "w-32 h-32 sm:w-36 sm:h-36 md:w-44 md:h-44",
+              offset: "translate-y-2 sm:translate-y-0 md:translate-y-2",
+            },
+            {
+              size: "w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32",
+              offset: "translate-y-8 sm:translate-y-10 md:translate-y-12",
+            },
+            {
+              size: "w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28",
+              offset: "-translate-y-6 sm:-translate-y-8 md:-translate-y-10",
+            },
+          ].map((circle, index) => (
             <div
               key={index}
-              className={`relative overflow-hidden rounded-full border border-white/20 shadow-[0_20px_80px_rgba(0,0,0,0.12)] ${
-                index === 2 ? "w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36" : "w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28"
-              }`}
+              className={`relative overflow-hidden rounded-full border border-white/20 shadow-[0_20px_80px_rgba(0,0,0,0.12)] ${circle.size} ${circle.offset}`}
             >
               <Image
                 src="/images/hero.jpeg"
-                alt="The Shimmora Bar hero circle"
+                alt={`The Shimmora Bar hero circle ${index + 1}`}
                 fill
                 className="object-cover"
                 priority
